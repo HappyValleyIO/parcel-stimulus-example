@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Parcel & Stimulus</title>
+    <meta name="description" content="Say hello to parcel and stimulusjs.">
+
+    <script src="./js/app.js" defer></script>
+    <link rel="stylesheet" href="./styles/index.scss">
+</head>
+<body>
+<div class="app" data-controller="hello">
+    <h1 class="title">Hello World</h1>
+    <div>
+        <label>
+            Your name:
+            <input type="text" data-target="hello.input"
+                   data-action="input->hello#updateMessage">
+        </label>
+        <p data-target="hello.greeting"></p>
+    </div>
+</div>
+</body>
+</html>
